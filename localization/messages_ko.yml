@@ -1,0 +1,1160 @@
+# !-----------------------------------------------------------------------------------------------!
+#                              Welcome to ChatControl localization file.
+# !-----------------------------------------------------------------------------------------------!
+#
+#   Here you can customize 99% of all plugin messages and tooltips.
+#
+#   1) COLOR CODES are supported with the '&' character.
+#      - For usage, see http://minecraftwiki.net/wiki/Formatting_codes
+#      - When you use them, place quotes around the message like this: "Hello &cworld."
+#       - To use HEX colors, use #123456 syntax: "Hello #123456world."
+#
+#   2) TO HIDE any message, set it to 'none'.
+#
+#   3) Add @noprefix, at the start of any message to remove the hardcoded prefix.
+#
+#   4) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding. See
+#      - https://github.com/kangarko/ChatControl-Red/wiki/Use-Right-Encoding
+#
+#   5) JSON is supported. Prepend the message with [JSON].
+#
+#   6) JAVASCRIPT NOTICE: Some of our messages are just-in-time compiled with JavaScript.
+#      Those typically have variables such as "self" inside of them. IF YOU CANNOT CODE
+#      in JavaScript, be extra careful and do not remove () brackets or the variables!
+#
+# !-----------------------------------------------------------------------------------------------!
+ 
+# -------------------------------------------------------------------------------------------------
+# Messages related to channels
+# -------------------------------------------------------------------------------------------------
+Channels:
+  Disabled: '&c채널이 비활성화되어 있습니다. 활성화하려면 settings.yml에서 Channels.Enabled를 true로 설정하세요.'
+  Disabled_World: '&c채널이 ''{0}'' 월드에서 사용할 수 없습니다.'
+  No_Channels: '&c채널이 없습니다. settings.yml의 Channels.List에 추가하세요.'
+  No_Channel: '해당 채널이 없습니다: ''{0}''. 사용 가능한 채널: {1}'
+  Available: ' &f사용 가능: &7'
+  Header: 채널
+  Header_Alternative:
+  - '&c채널: &7현재 채널: {0}'
+  Header_Alternative_Channel: '{channel} ({mode})'
+  Use_Alternative_Header: false
+  Tooltip_Joined: '&f이 채널에 참여하였습니다.'
+  Tooltip_Join_Write: '&2입력 모드로 채널에 참여하려면 클릭하세요.'
+  Tooltip_Join_Read: '&2읽기 전용 모드로 이 채널에 참여하려면 클릭하세요.'
+  Tooltip_Leave_Write:
+  - ''
+  - '&6알림: &f자동으로 이전에 참여한 입력 모드 채널 ''{0}''에서 나가게 됩니다.'
+  Tooltip_Channels: ' &f당신의 채널:'
+  Tooltip_Join: '&a참여하려면 클릭하세요.'
+  Tooltip_Leave: '&c나가려면 클릭하세요.'
+  Tooltip_Switch_To_Read: '&7읽기 모드로 전환'
+  Tooltip_Switch_To_Write: '&7입력 모드로 전환'
+  
+  Join:
+    Usage: <channel> [mode] [player]
+    Description: 채팅 채널에 참여합니다.
+    Usages_Self:
+    - '/{label} {sublabel} <채널> &7- 입력 모드로 채널에 참여합니다.'
+    - '/{label} {sublabel} <채널> <모드> &7- 해당 모드로 채널에 참여합니다.'
+    Usages_Others:
+    - '/{label} {sublabel} <채널> <모드> [플레이어] &7- 다른 플레이어를 해당 모드로 채널에 참여시킵니다.'
+    Usages_2:
+    - ''
+    - '&c참여하는 플레이어가 제한을 초과하면 이전 채널을 나가게 됩니다.'
+    - ''
+    - '&c경고: 플레이어가 채널에 참여할 때 관련 채널 및 모드 (읽기 또는 쓰기)에 대한'
+    - '&c권한(chatcontrol.channel.join.{channel}.{mode})을 부여하지 않으면'
+    - '&c채널에서 플레이어를 퇴장시킵니다.'
+    Already_Joined: 플레이어는 이미 {0} 모드로 이 채널에 참여하고 있습니다.
+    Already_Joined_Self: 이미 {0} 모드로 이 채널에 참여하였습니다.
+    Read_Disabled: 읽기 모드로 채널에 참여하는 것이 비활성화되었습니다.
+    Leave_Reading_You: ' 읽기 모드로 &o{0}&7 개의 채널을 나갔습니다.'
+    Leave_Reading_Other: ' {target} 님이 읽기 모드로 &o{0}&7 개의 채널을 나가셨습니다.'
+    Switch_Success: 채널 &o{0} &7의 모드를 {1}에서 {2}로 전환했습니다.
+    Success: '&o{0} &7채널에 {1} 모드로 참여했습니다.'
+    Notification: none
+    
+  Leave:
+    Usage: <channel> [player]
+    Description: 채팅 채널을 나갑니다.
+    Usages_Self:
+    - '/{label} {sublabel} <채널> &7- 채팅 채널을 나갑니다.'
+    Usages_Others:
+    - '/{label} {sublabel} <채널> <플레이어> &7- 플레이어를 채널에서 강제로 나가게 합니다.'
+    Not_Joined_V2: 이 채널에 참여하지 않았습니다. 나갈 수 있는 채널이 없습니다.
+    Not_Joined_V2_Other: '{0}님이 이 채널에 참여하지 않았습니다. 나갈 수 있는 채널이 없습니다.'
+    Not_Joined_V2_Suggest_Alt: '이 채널에 참여하지 않았습니다. 나갈 수 있는 채널: {1}.'
+    Not_Joined_V2_Suggest_Alt_Other: '{0}님이 이 채널에 참여하지 않았습니다. 나갈 수 있는 채널: {1}'
+    No_Channels: 나갈 채널이 없습니다.
+    No_Channels_Other: 플레이어가 나갈 채널이 없습니다.
+    Switch_To_Reading: '&o{0} &7채널을 읽기 모드로 전환했습니다. 나가려면 명령을 다시 입력하세요.'
+    Switch_To_Reading_Other: '{target}님이 &o{0} &7채널을 읽기 모드로 전환했습니다. 나가려면 명령을 다시 입력하세요.'
+    Success: '&o{0} &7채널을 나갔습니다.'
+    Success_Other: '{target}님이 &o{0} &7채널을 나가셨습니다.'
+    Notification: none
+  
+  Set:
+    Usage: <player> <channel> <mode/none>|<anotherChannel> <anotherMode>|등
+    Description: 제한을 우회하여 채널 및 모드를 대량 설정합니다.
+    Success: '{1}님의 {0} 채널을 {2} 모드로 설정했습니다.'
+    Success_Remove: '{1}님의 {0} 채널을 제거했습니다.'
+    Usages:
+    - '/{label} {sublabel} kangarko admin write &7- 플레이어의 채널을 설정합니다.'
+    - '/{label} {sublabel} kangarko admin none &7- 플레이어에서 채널을 제거합니다.'
+    
+  List:
+    Description: 채팅 채널에 있는 플레이어 목록을 표시합니다.
+    Usages:
+    - '/{label} {sublabel} &7- 모든 채널과 플레이어 목록을 표시합니다.'
+    - '/{label} {sublabel} <채널> &7- 특정 채널의 플레이어 목록을 표시합니다.'
+    Mute_V2: ' &8[&7음소거&8]'
+    Unmute_V2: ' &8[&c음소거 해제&8]'
+    Mute_V2_Tooltip: '&615분 동안 이 채널을 음소거하려면 클릭하세요.'
+    Unmute_V2_Tooltip: '&6이 채널의 음소거를 해제하려면 클릭하세요.'
+    Join_V2: ' &8[&7참여&8]'
+    Leave_V2: ' &8[&a나가기&8]'
+    Join_V2_Tooltip: '&6이 채널에 참여하려면 클릭하세요.'
+    Leave_V2_Tooltip: '&6이 채널을 나가려면 클릭하세요.'
+    No_Players: ' &7- &o플레이어 없음.'
+    Remove: '&8[&4X&8] '
+    Remove_Tooltip: '&6{0}님을 채널에서 제거하려면 클릭하세요.'
+    Header_V2: 온라인 채널 플레이어
+    Header_V2_Network: 번지 채널 플레이어
+    Line: '&8[{mode_color}{mode}&8] &f{player}'
+    
+  Send:
+    Usage: <채널> <메시지>
+    Description: 채널에 메시지를 전송합니다.
+  
+  Send_As:
+    Usage: <플레이어> <채널> <메시지>
+    Description: 플레이어로서 채널에 메시지를 전송합니다.
+    Error: '''''{0}''''으로 메시지 전송이 실패했습니다: {1}'
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to commands
+# -------------------------------------------------------------------------------------------------
+Commands:
+  No_Console: '&c이 명령어는 플레이어만 사용할 수 있습니다.'
+  No_BungeeCord: BungeeCord를 사용하려면 활성화해야 합니다.
+  No_MySQL: 이 명령어는 settings.yml에서 MySQL을 활성화해야 합니다.
+  No_MySQL_BungeeCord: BungeeCord를 통해 이 기능을 사용하려면 MySQL을 활성화해야 합니다.
+  No_Group_Name: '그룹 이름을 지정하세요. 사용 가능한 것: {0}'
+  No_Rule_Name: '규칙 이름을 지정하세요. 사용 가능한 것: {0}'
+  No_Message_Name: '메시지 그룹을 지정하세요. 사용 가능한 것: {0}'
+  No_Cached_Player: 플레이어 이름을 지정하세요 (오프라인 플레이어도 가능합니다).
+  No_Reason_While_Silent: 음소거 옵션을 사용할 때는 이유를 지정할 수 없습니다.
+  No_Silent_And_Anonymous: 음소거 및 익명 옵션을 동시에 지정할 수 없습니다.
+  Console_Missing_Player_Name: 콘솔에서 실행할 때는 플레이어 이름을 지정하세요.
+  Compiling_Data: 데이터베이스 정보를 컴파일 중..
+  Cooldown_Wait: '&c{duration}초 동안 이 명령어를 다시 사용하기 전에 기다려주세요.'
+  Invalid_Server: '''''{0}'''' 서버가 없습니다. 사용 가능한 것: {1}.'
+  Invalid_Argument: '&c잘못된 인수입니다. 도움말을 보려면 &6/{label} ? &c를 사용하세요.'
+  Invalid_Sub_Argument: '&c잘못된 인수입니다. ''/{label} {0}''을(를) 사용하여 도움말을 확인하세요.'
+  Invalid_Argument_Multiline: '&c잘못된 인수입니다. 사용법:'
+  Invalid_Time: '예상 시간은 ''3시간'' 또는 ''15분''과 같아야 합니다. 입력된 값: ''{input}'''
+  Invalid_Number: '숫자는 정수 또는 소수점 숫자여야 합니다. 입력된 값: ''{input}'''
+  Invalid_Material: '''''{0}'''' 자료가 없습니다. 사용 가능한 것은 https://mineacademy.org/materials에서 확인하세요.'''
+  Invalid_Type: '''''{0}'''' 유형이 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Mode: '''''{0}'''' 모드가 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Tag: '''''{0}'''' 태그가 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Channel: '''''{0}'''' 채널이 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Group: '''''{0}'''' 그룹이 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Warning_Set: '''''{0}'''' 경고 설정이 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Param: '잘못된 매개변수: ''{0}'' 사용 가능한 것: {1}'
+  Invalid_Param_Short: '잘못된 매개변수: {0}'
+  Invalid_Rule: '''''{0}'''' 규칙이 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Message: '''''{0}'''' 메시지가 없습니다. 사용 가능한 것: {1}'''
+  Invalid_Region: 영역 ''{0}''이(가) 존재하지 않습니다.
+  Label_Authors: 제작자
+  Label_Description: '&c&l설명:'
+  Label_Optional_Args: 선택적 매개변수
+  Label_Required_Args: 필수 매개변수
+  Label_Usage: '&c&l사용법:'
+  Label_Help_For: /{label}에 대한 도움말
+  Label_Subcommand_Description: ' &f/{label} {sublabel} {usage+}{dash+}{description}'
+  Help_Tooltip_Description: '&7설명: &f{description}'
+  Help_Tooltip_Permission: '&7권한: &f{permission}'
+  Help_Tooltip_Usage: '&7사용법: &f'
+  Reload_Description: 설정을 다시 불러옵니다.
+  Reload_Started: 플러그인 데이터를 다시 불러오는 중입니다. 잠시 기다려주세요..
+  Reload_Success: '&6ChatControl {plugin_version}이(가) 다시 불러와졌습니다.'
+  Reload_Fail: '&4오류, &c다시 불러오기 실패! 자세한 내용은 콘솔을 확인하세요. 에러: {error}'
+  Reload_File_Load_Error: '&4오류, &c디스크에서 파일을 로드하는 데 문제가 발생했습니다! 자세한 내용은 콘솔을 확인하세요. ChatControl이 다시 불러와지지 않았습니다.'
+  Debug_Description: 버그를 신고할 때 설정을 ZIP 파일로 준비합니다.
+  Debug_Preparing: '&6디버그 로그 준비 중...'
+  Debug_Success: '&2{amount}개 파일이 debug.zip으로 복사되었습니다. 민감한 MySQL 정보는 yml 파일에서 제거되었습니다. 확인을 위해 ufile.io(또는 직접 GitHub 이슈에) 업로드하세요.'
+  Debug_Copy_Fail: '&c파일 복사에 실패하였으며 중지되었습니다. 자세한 내용은 콘솔을 확인하세요.'
+  Debug_Zip_Fail: '&c파일을 ZIP으로 만들지 못했습니다. 자세한 내용은 콘솔을 확인하세요. debug/ 폴더를 수동으로 ZIP하여 ufile.io를 통해 보내거나 직접 GitHub 이슈에 업로드하세요.'
+  Perms_Description: 플러그인이 가진 모든 권한을 나열합니다.
+  Perms_Header: ChatControl 권한 전체 목록
+  Perms_Main: Main
+  Perms_Permissions: '권한:'
+  Perms_True_By_Default: '&7[기본으로 true]'
+  Perms_Info: '&7정보: &f'
+  Perms_Default: '&7기본값? '
+  Perms_Applied: '&7보유 중? '
+  Perms_Yes: '&2예'
+  Perms_No: '&c아니요'
+  Error: '&4&l오류! &c명령어가 실패했습니다. :( 콘솔을 확인하고 오류를 보고하세요.'
+  Header_No_Subcommands: '&c이 명령어에는 아규먼트가 없습니다.'
+  Header_No_Subcommands_Permission: '&c서브커맨드를 볼 권한이 없습니다.'
+  Header_Color: GOLD
+  Header_Secondary_Color: RED
+  Header_Format: |-
+      &r
+      {theme_color}&m<center>&r{theme_color} {title} &m
+      &r
+  # Must be exactly one letter
+  Header_Center_Letter: ' '
+  Header_Center_Padding: 150
+  Reloading: 다시 불러오는 중
+  Disabled: 비활성화됨
+  Use_While_Null: '&c플러그인이 {state} 상태일 때는 이 명령어를 사용할 수 없습니다.'
+  Incompatible: 이 명령어는 Minecraft {0} 이상이 필요합니다.
+  Ignore_Part_On: '&7이제 {0}을(를) 무시합니다.'
+  Ignore_Part_Off: '&7이제 {0}의 무시를 해제했습니다.'
+  Use_Alternative_Header: false
+  Alternative_Header: '&cChatControl Red: &7모든 명령어를 보려면 ''/{0} ?''를 입력하세요.'
+  
+  Announce:
+    Usage: <type> <message>
+    Description: 다양한 메시지를 알립니다.
+    Usage_Chat: /{label} {sublabel} chat <메시지> [서버:<서버>] [타입:raw] &7- 채팅 메시지를 방송합니다.
+    Usage_Title: /{label} {sublabel} title <제목|부제목> fadein:<틱> stay:<틱> fadeout:<틱> &7- 타이틀을 보냅니다. 부제목만 보내려면 '/{label} {sublabel} title |여기에 메시지 입력'.
+    Usage_Actionbar: /{label} {sublabel} actionbar <메시지> server:creative &7- 'creative' 서버로 액션바 메시지를 보냅니다.
+    Usage_Bossbar: /{label} {sublabel} bossbar <메시지> time:<초> color:<색상> style:<스타일> &7- 이 서버에 보스바를 보냅니다.
+    Usage_Toast: /{label} {sublabel} toast <메시지> icon:<재료> &7- 토스트 메시지를 보냅니다.
+    Usage_Image: /{label} {sublabel} image <경로> <라인높이> [메시지|다른메시지]
+    Usage_No_Perms: chatcontrol.command.announce.chat과 같은 어떤 유형을 알리기 위한 하위 권한이 없습니다.
+    Usage_Footer:
+    - ''
+    - '&c&l팁: &c다른 서버로 보내려면 server:<이름> &c매개변수를 사용하거나,'
+    - '&c또는 server:bungee를 사용하여 모든 서버에 보내세요. 채팅 메시지에 대한'
+    - '&c타입:raw를 사용하여 서식이 없는 메시지를 (BungeeCord를 제외하고) 보낼 수 있습니다.'
+    - '&7채팅을 보낼 때, [JSON]을 앞에 붙이면 해당 메시지를 원시 JSON으로 보낼 수 있습니다.'
+    No_Type: 방송할 메시지를 지정하세요.
+    Empty: 메시지가 비어 있을 수 없습니다!
+    Image_Lines: 이미지가 확장될 채팅 라인 수를 나타내는 유효한 숫자를 입력하세요.
+    Invalid_Image: '''{0}''에서 이미지를 찾을 수 없습니다.'
+    Invalid_Type: '보낼 방법을 알 수 없습니다: ''{0}''.'
+    Invalid_Raw_Type: 유효하지 않은 유형입니다! 현재는 'raw'만 지원됩니다.
+    Invalid_Time_Ticks: 틱으로 나타낸 유효한 정수를 입력하세요.
+    Invalid_Time_Seconds: 초로 나타낸 유효한 정수를 입력하세요.
+    Invalid_Key: '유효하지 않은 키 ''{0}'' 값: {1}. 사용 가능: {2}'
+    Invalid_File: '해당 파일이 없습니다: {0}'
+    Image_Error: '''{0}''에서 이미지 방송에 실패했습니다: {1}. 자세한 내용은 콘솔을 참조하세요.'
+    Invalid_Image_Height: 이미지 높이는 {0}에서 {1} 사이여야 합니다.
+    Chat_Body:
+    - '&8{chat_line}'
+    - '<center>&c&l! &6&l{type} &c&l!'
+    - '&8{chat_line}'
+    - '&f{lines}'
+    - '{remaining_space}'
+    - '&8{chat_line}'
+    Chat_Body_Line_Color: yellow
+    Type_V2: 공지
+    Type_V2_Network: 네트워크 공지
+    Success_V2: 공지가 전송되었습니다.
+    Success_V2_Network: 공지가 {0} 서버로 전송되었습니다.
+  
+  Book:
+    Usage: <new/save/delete/open/list> [이름] [플레이어]
+    Description: 게임 내 책을 조작합니다.
+    Usages:
+    - '/{label} {sublabel} new &7- ''/mail new'' 명령을 사용하여 새로운 책을 생성합니다.'
+    - '/{label} {sublabel} save <이름> &7- 서명된 책을 저장합니다.'
+    - '/{label} {sublabel} delete <이름> &7- 저장된 책을 삭제합니다.'
+    - '/{label} {sublabel} open <이름> [플레이어] &7- 플레이어를 위해 책을 엽니다.'
+    - '/{label} {sublabel} give <이름> [플레이어] &7- 플레이어에게 책을 주어합니다.'
+    - '/{label} {sublabel} list &7- 생성된 모든 책을 나열합니다.'
+    Invalid: '해당하는 책이 없습니다: ''{0}''. 가능한 책: {1}'
+    No_Book: '먼저 책 이름을 지정하세요. 가능한 책: {0}.'
+    Mail_Disabled: 메일이 비활성화되어 있을 때는 책을 생성할 수 없습니다. settings.yml에서 Mail.Enabled를 true로 설정하여 활성화하세요.
+    New: 메일 기능을 사용하여 책을 만드세요. 준비가 되면 '/{label} {sublabel} save'를 입력하여 저장하세요.
+    Save_No_Book: 먼저 '/{label} {sublabel} new'로 책을 만드세요.
+    Save_Not_Signed: 저장하기 전에 책에 서명하세요.
+    Save_No_Name: 책 이름을 지정하세요. 그러면 플러그인 디렉토리의 books/에 저장됩니다.
+    Save_New: 메일을 books/{0}.yml로 책으로 저장했습니다.
+    Save_Override: 메일을 books/{0}.yml로 책으로 저장했습니다. 이전 파일이 덮어쓰기되었습니다.
+    Save_Error: '{0} 저장 실패: {1}'
+    Delete: 책 '{0}'을(를) 성공적으로 삭제했습니다.
+    Delete_Fail: '''{0}'' 삭제 실패.'
+    List_Open: '&8[&6O&8]'
+    List_Open_Tooltip: '&6이 책 열기.'
+    List_Delete: '&8[&cX&8]'
+    List_Delete_Tooltip: '&6클릭하여 삭제.'
+    List_None: books/ 폴더에 책이 없습니다.
+    List_Header: 책 목록
+    List: ' &7''&f{title}&7'' &7by {author} from {date}'
+    List_Tooltip: '&7파일 이름: &f{0}'
+    Page: '&6페이지 {0}:'
+    Page_Header: 책 '{0}' by {1}
+    Unnamed: 이름 없음
+    Unsigned: 서명되지 않음
+    Open: 책이 {0}에게 열렸습니다.
+    Give: 플레이어 {0}이(가) 아이템으로 책을 받았습니다.
+    Loaded: '''{0}'' 책을 메일로 로드했습니다. ''/{1} send''를 사용하여 전송하세요.'
+
+  Clear:
+    Usage: '[-a/-c/-s/-f] [이유]'
+    Description: 게임 채팅을 지웁니다.
+    Usages:
+    - '/{label} {sublabel} [이유] &7- 게임 채팅을 지웁니다.'
+    - '/{label} {sublabel} -a(nonymous) &7- 누가 지웠는지 방송하지 않습니다.'
+    - '/{label} {sublabel} -c(console) &7- 서버 콘솔을 지웁니다.'
+    - '/{label} {sublabel} -s(ilent) &7- 어떤 메시지도 방송하지 않습니다.'
+    - '/{label} {sublabel} -f(orced) &7- 우회 권한을 가진 플레이어의 채팅을 지웁니다.'
+    Success_V2: '게임 채팅이 {0}에 의해 지워졌습니다. 이유: {1}'
+    Success_V2_No_Reason: 게임 채팅이 {0}에 의해 지워졌습니다.
+    Success_V2_Anonymous: '게임 채팅이 지워졌습니다. 이유: {1}'
+    Success_V2_Anonymous_No_Reason: 게임 채팅이 지워졌습니다.
+    Success_V2_Network: '네트워크 채팅이 {0}에 의해 지워졌습니다. 이유: {1}'
+    Success_V2_Network_No_Reason: '네트워크 채팅이 {0}에 의해 지워졌습니다. 이유: {1}'
+    Success_V2_Network_Anonymous: '네트워크 채팅이 지워졌습니다. 이유: {1}'
+    Success_V2_Network_Anonymous_No_Reason: 네트워크 채팅이 지워졌습니다.
+    Success_Console: 콘솔이 {0}에 의해 지워졌습니다.
+    Success_Staff: '{prefix_info}채팅이 {0}에 의해 성공적으로 지워졌습니다.'
+
+  Color:
+    Usage: <color/status/menu> [장식] [플레이어]
+    Description: 채팅 색상 및 장식을 설정합니다.
+    Usages_1:
+    - '/{label} {sublabel} status [플레이어] &7- 색상과 장식을 출력합니다.'
+    - '/{label} {sublabel} menu &7- 색상과 장식 메뉴를 엽니다.'
+    - '/{label} {sublabel} yellow &7- 채팅 색상을 노랑으로 설정합니다.'
+    Usages_Hex_1:
+    - '/{label} {sublabel} #<hexcode> &7- 채팅 색상을 HEX로 설정합니다.'
+    Usages_2:
+    - '/{label} {sublabel} default bold [플레이어] &7- 장식만 설정합니다.'
+    - '/{label} {sublabel} red bold [플레이어] &7- 색상과 장식을 설정합니다.'
+    - '/{label} {sublabel} reset &7- 색상을 초기화합니다.'
+    - '/{label} {sublabel} reset reset [플레이어] &7- 색상과 장식을 초기화합니다.'
+    Usages_Hex_2:
+    - ''
+    - '&c&lTIP:&c htmlcolorcodes.com을 방문하여 HEX 색상을 생성하세요.'
+    Not_Saved: '{0}은(는) 색상이나 장식을 가지고 있지 않습니다.'
+    Chat_Color: '&7채팅 색상'
+    Decoration: 장식
+    Invalid_Color_Legacy: '잘못된 채팅 색상입니다. 유효한 구문: & 색상, 이름. 가능한 색상: {0}'
+    Invalid_Color_Hex: '잘못된 채팅 색상입니다. 유효한 구문: & 색상, 이름 또는 #<hex>. 가능한 색상: {0}'
+    Invalid_Decoration: '잘못된 채팅 장식입니다. & 또는 이름 구문을 사용하세요. 가능한 장식: {0}'
+    Decoration_Not_Allowed: 색상이 아닌 장식만 입력하세요.
+    Color_Not_Allowed: 장식이 아닌 색상만 입력하세요.
+    Reset_Color: '&7{0}의 채팅 색상을 초기화했습니다.'
+    Set_Color: '&7{0}의 채팅 색상을 {1} &7로 설정했습니다.'
+    Reset_Color_Set_Decoration: '&7{0}의 채팅 색상을 초기화하고 장식을 {1}&r&7로 설정했습니다.'
+    Set_Color_Set_Decoration: '&7{0}의 채팅 색상을 {1}&7로 설정하고 장식을 {2}&r&7로 설정했습니다.'
+    Reset_Color_Reset_Decoration: '&7{0}의 채팅 색상과 장식을 모두 초기화했습니다.'
+    Set_Color_Reset_Decoration: '&7{0}의 채팅 색상을 {1}&7로 설정하고 장식을 초기화했습니다.'
+    
+  Forward:
+    Usage: <server> <command...>
+    Description: BungeeCord로 명령을 전송합니다.
+    Usages:
+    - '/{label} {sublabel} <서버> <명령...> &7- BungeeCord 또는 네트워크의 다른 서버에서 명령을 실행합니다.'
+    - '/{label} {sublabel} bungee send all creative &7- BungeeCord에서 ''send all creative'' 명령을 실행합니다.'
+    - '/{label} {sublabel} creative say Hi there! &7- ''creative'' 서버에서 명령을 실행합니다.'
+    - ''
+    - '&c&lNOTE: &c빈 서버로 명령을 보낼 수 없습니다.'
+    Unknown_Server: '알 수 없는 서버입니다. 가능한 서버: bungee, {0}'
+    Success: 명령이 성공적으로 전송되었습니다.
+
+  Info:
+    Usage: <param> <player> [인자...]
+    Description: 디버그 정보를 표시합니다.
+    Usages:
+    - '/{label} {sublabel} nick <플레이어/닉네임> &7- 플레이어의 닉네임과 이름을 출력합니다.'
+    - '/{label} {sublabel} newcomer <플레이어> &7- 플레이어가 신규 유저인지 확인합니다.'
+    - '/{label} {sublabel} cache <플레이어> &7- 플레이어에 대한 저장된 정보를 출력합니다.'
+    - '/{label} {sublabel} variables <플레이어> <메시지> &7- 메시지 변수를 구문 분석합니다.'
+    - '/{label} {sublabel} script <자바스크립트> &7- 자바스크립트를 구문 분석합니다. require/ignore 스크립트 연산자에서 스크립트를 입력하세요.'
+    - ''
+    - '&c&l예시:'
+    - '&c/{label} {sublabel} variables Notch &c{player} is in channel {channel}'
+    - ''
+    - '&c&lTIP:&c 이를 사용하여 변수의 성능을 측정하고 렉을 일으키는 요인을 찾을 수 있습니다.'
+    Cache_Player: '&c{0}에 대한 캐시 정보'
+    Cache_Location: '&c위치: '
+    Cache_Nick: '플레이어 {0}은(는) 닉네임을 가지고 있습니다: {1}.'
+    Is_Newcomer: '{0} &a는 신규 유저입니다.'
+    Is_Not_Newcomer: '{0} &c는 신규 유저가 아닙니다.'
+    Variables_No_Message: 변수를 대체할 메시지를 입력하세요.
+    Variables_V2: '&7결과 (소요 시간 {0}ms): &r{1}'
+    Variables_V2_Empty: '&7결과 (소요 시간 {0}ms): &o빈 출력.'
+    
+  Ignore:
+    Usage: <player/list> [플레이어]
+    Description: 플레이어로부터의 메시지나 비밀 메시지를 차단하거나 다시 허용합니다.
+    Usages:
+    - '/{label} <플레이어> &7- 특정 플레이어를 차단하거나 차단 해제합니다.'
+    Usages_Others:
+    - '/{label} <대상> <플레이어> &7- 다른 플레이어에 대한 특정 플레이어의 차단 여부를 전환합니다.'
+    Usages_List:
+    - '/{label} list &7- 현재 차단 중인 플레이어 목록을 확인합니다.'
+    Usages_List_Others:
+    - '/{label} list <플레이어> &7- 다른 플레이어가 차단 중인 플레이어 목록을 확인합니다.'
+    Not_Ignoring_V2: 현재 아무도 차단하지 않고 있습니다.
+    Not_Ignoring_V2_Other: '{0}님은 현재 아무도 차단하지 않고 있습니다.'
+    List_Header: '{0}님이 현재 차단 중인 플레이어 목록'
+    List_Tooltip_Stop: '&6클릭하여 {0}님을 다시 차단하지 않습니다.'
+    Cannot_Ignore_Admin: 해당 플레이어는 차단할 수 없습니다.
+    Cannot_Ignore_Self: 자기 자신을 차단할 수 없습니다. :)
+    Enable: 이제 {1}님의 메시지를 &c차단 &7하고 있습니다.
+    Enable_Other: '{0}님은 이제 {1}님의 메시지를 &c차단 &7하고 있습니다.'
+    Disable: 이제 {1}님의 메시지를 &a다시 차단하지 않음 &7으로 변경했습니다.
+    Disable_Other: '{0}님은 이제 {1}님의 메시지를 &a다시 차단하지 않음 &7으로 변경했습니다.'
+    Cannot_PM: '{0}님이 당신을 차단하고 있어 메시지를 보낼 수 없습니다.'
+    Cannot_PM_Ignored: 현재 {0}님을 차단하고 있어 메시지를 보낼 수 없습니다.
+    Cannot_Sound_Notify_Sender: '{0}님을 차단하고 있어 태그를 할 수 없습니다.'
+    Cannot_Sound_Notify_Receiver: 상대방 {0}님이 당신을 차단하고 있어 태그를 할 수 없습니다.
+
+  Inspect:
+    Usage: <file/plugin/class> <값>
+    Description: Java 클래스, 필드 및 메서드를 검사합니다.
+    Usages:
+    - '/{label} {sublabel} file <경로> &7- 파일이나 폴더를 보기'
+    - '/{label} {sublabel} plugin <플러그인> &7- 플러그인 클래스를 보기'
+    - '/{label} {sublabel} class <클래스> &7- 클래스 내의 필드/메서드를 검사합니다.'
+    Invalid_File: 파일 '{0}'은(는) 서버 루트 폴더에 존재하지 않습니다.
+    Illegal_File: 파일 '{0}'은(는) 지원되지 않는 형식입니다.
+    Listing_Content: '{0}의 내용을 나열합니다.'
+    Listing_File: '{0} 파일을 나열합니다.'
+    Plugin_Not_Loaded: 플러그인 '{0}'이(가) 로드되지 않았습니다!
+    Listing_Classes: '{0} 클래스를 나열합니다.'
+    Plugin_Tooltip:
+    - '클릭하여 이 클래스를 검사합니다.'
+    No_Class: '해당 클래스가 없습니다: {0}'
+    Inspecting_Class: '{0} 클래스를 검사 중'
+    Inspect_Tooltip:
+    - '&6{0} 검사'
+    Parent: '&3[상위]'
+    Open:
+    - '&6{0} 열기'
+    Cut: '&c> &7{0} 줄이 제한을 초과하여 생략되었습니다.'
+
+  Log:
+    Usage: <유형> [키:값...]
+    Description: 마지막 플레이어 통신 기록을 확인합니다.
+    Usages_1:
+    - '/{label} {sublabel} <유형> player:kangarko &7- 특정 플레이어의 로그를 확인합니다.'
+    - '/{label} {sublabel} <유형> before:10m &7- 특정 타임스탬프 이전의 로그를 확인합니다.'
+    - '/{label} {sublabel} <유형> in:1h &7- 최근 타임스탬프의 로그를 확인합니다.'
+    Usages_Channel:
+    - '/{label} {sublabel} <유형> channel:admin &7- 특정 채널의 로그를 확인합니다.'
+    Usages_To:
+    - '/{label} {sublabel} <유형> to:receiver &7- 수신자에게 보낸 개인 메시지/우편을 확인합니다.'
+    Usages_2:
+    - '/{label} {sublabel} <유형> label:me &7- 명령어 로그를 확인합니다.'
+    Usages_Rule:
+    - '/{label} {sublabel} <유형> rule:ip &7- 규칙과 일치하는 로그를 확인합니다.'
+    - '/{label} {sublabel} <유형> group:ads &7- 규칙 그룹과 일치하는 로그를 확인합니다.'
+    Usages_3:
+    - ''
+    - '&c&lTIP: &c여러 키:값 매개변수를 사용할 수 있습니다. 모든 로그를 나열하려면 유형에 ''all''을 입력하세요.'
+    - '&c&lTIP: &c''player'' 및 ''to'' 매개변수는 닉네임을 지원하지 않습니다.'
+    No_Logs_Plain: 로그가 발견되지 않았습니다.
+    No_Logs_Of_Type: '{0}에 대한 로그가 발견되지 않았습니다.'
+    Type_Chat: 채팅
+    Type_Command: 명령어
+    Type_Private_Message: 개인 메시지
+    Type_Mail: 우편
+    Type_Sign: 표지판
+    Type_Book: 책
+    Type_Anvil: 모루
+    Tooltip_Channel: '&7채널: &f{0}'
+    Tooltip_Rule_Plain: '&7규칙: &f{0}'
+    Tooltip_Rule_Unnamed: '&7규칙: &f&o이름 없음.'
+    Tooltip_Group: '&7그룹: &f{0}'
+    Tooltip_Recipients: '&7수신자:'
+    Tooltip_Click_To_Read:
+    - ''
+    - '&6클릭하여 읽기.'
+    Sent_Mail: ' &7우편 발송 &f''{0}'''
+    Placed_Sign: ' &7표지판 설치:'
+    Wrote_Book_Unsigned: ' &7책 작성 &f&o미서명&r'
+    Wrote_Book_Signed: ' &7책 작성 &f{title}'
+    Wrote_Book_Tooltip: '&6열기 위해 클릭'
+    Renamed_Item: ' &7아이템 이름 변경: &f'
+    No_Logs_Matched: 주어진 매개변수와 일치하는 로그가 없습니다.
+    Listing_Header_All: 모든 로그 나열 중
+    Listing_Header_Of_Type: '{0} 로그 나열 중'
+    Invalid_Syntax: '잘못된 구문! 사용법: <값>:<키>. 받은 값: {0}'
+    Invalid_Value: '''{0}''에 대한 유효한 값을 지정하세요.'
+    Invalid_Key: '잘못된 키 ''{0}'' 값: {1}.'
+    Cannot_Use_Channel: 채팅에서만 'channel' 매개변수를 사용할 수 있습니다.
+    Cannot_Use_Label: 명령어에서만 'label' 매개변수를 사용할 수 있습니다.
+    Cannot_Use_To: 개인 메시지에서만 'to' 매개변수를 사용할 수 있습니다.
+    
+  List:
+    Usage_Server: '[서버]'
+    Description: 온라인 플레이어를 나열합니다.
+    Usage_1_Local: /{label} &7- 온라인 플레이어를 나열합니다.
+    Usage_1_Network: /{label} &7- 모든 서버의 온라인 플레이어를 나열합니다.
+    Usage_2: /{label} survival &7- 'survival' 서버의 플레이어를 나열합니다.
+    Header_Local: 온라인 플레이어 목록
+    Header_Network: 네트워크 플레이어 목록
+    
+  Mail:
+    Usage: <new/send/inbox/sent>
+    Description: 게임 메일을 관리합니다.
+    Usages:
+    - '/{label} new &7- 새로운 메일을 작성합니다.'
+    - '/{label} send <플레이어/다른플레이어> &7- 메일을 보냅니다.'
+    - '/{label} autor <시간/보기/끄기> &7- 메일 자동 응답기를 설정합니다.'
+    - '/{label} inbox &7- 수신 메일을 읽습니다.'
+    - '/{label} archive &7- 보낸 메일을 읽습니다.'
+    - ''
+    - '&c&lTIP: &c시간은 "1시간"과 같은 인간이 이해할 수 있는 형식입니다.'
+    No_Pending: 먼저 '/{label} new'로 메일을 작성하세요.
+    No_Subject: 메일에 주제가 없습니다. 먼저 드래프트 아이템을 서명하세요.
+    No_Recipients: 수신자를 '|'(파이프)로 구분하여 지정하거나, 'online'으로 온라인 플레이어에게 보내거나, 'all'로 데이터베이스에 저장된 모든 플레이어에게 보내세요.
+    Autoresponder_Usage: '''보기''로 자동 응답기를 보거나, ''끄기''로 비활성화하거나, ''3일''과 같이 시간을 작성하여 기존 것을 갱신하거나 새로 만들 수 있습니다.'
+    Autoresponder_Disabled: 활성화된 자동 응답기가 없습니다.
+    Autoresponder_Removed: 메일 자동 응답기가 제거되었습니다.
+    Autoresponder: 자동 응답기 '{title}'은 {date}에 만료됩니다. 갱신하려면 '/{label} {0} <시간>'을 입력하세요.
+    Autoresponder_Missing: 시간을 설정하려 했지만 드래프트를 생성하지 않았거나 이전 자동 응답기가 없습니다. 먼저 새 메일 드래프트를 만드세요.
+    Autoresponder_Updated: 이전 자동 응답기를 갱신하여 {0}에 만료되었습니다.
+    Autoresponder_Set: 새로운 자동 응답기가 {0}에 만료되도록 설정되었습니다.
+    Autoresponder_Invalid_Time: 부적절한 구문입니다. '1분' 또는 '3일'과 같은 인간이 이해할 수 있는 시간 형식이 필요합니다. 대신 '{0}'을(를) 받았습니다.
+    Delete_Invalid: 해당 이메일이 없습니다. 이미 삭제된 것일 수 있습니다.
+    Delete_Sender: 선택한 이메일이 삭제되었습니다. 수신자는 여전히 읽을 수 있습니다.
+    Delete_No_Recipient: 수신자 고유 ID가 제공되지 않았습니다.
+    Delete_Invalid_Recipient: ID가 {0}인 수신자가 없습니다.
+    Delete_Recipient: 선택한 이메일이 삭제되었습니다.
+    Hand_Full: 메일을 작성하기 전에 손을 비워주세요.
+    Already_Drafting: 이미 인벤토리에 메일 드래프트 아이템이 있습니다.
+    Item_Title: 우클릭하여 메일을 작성하세요.
+    Item_Tooltip:
+    - '&r&7마우스로 클릭하여 취소합니다.'
+    New_Usage_New: 새 메일을 작성하려면 우클릭하세요. 아이템을 버리려면 드래프트를 사용하세요.
+    New_Usage_Pending: 메일 작성을 계속하려면 우클릭하세요. 아이템을 버리려면 드래프트를 사용하세요.
+    Reply_Usage: '{0}에 대한 답장을 준비하려면 우클릭하세요. ''완료''를 클릭하여 보내세요. 아이템을 버리려면 드래프트를 사용하세요.'
+    Open_Tooltip: '&6열려면 클릭하세요.'
+    Open_Tooltip_Script_Read: '&7이 메일은 {0}번 읽었습니다.'
+    Open_Tooltip_Script_Unread: '&6이 메일은 읽지 않았습니다.'
+    Reply_Tooltip: '&6답장을 보내려면 클릭하세요.'
+    Forward_Tooltip: '&6전달하려면 클릭하세요.'
+    Delete_Tooltip: '&6삭제하려면 클릭하세요.'
+    Inbox_Line: ' &r{subject} &7보낸 이: {sender} &7시간: {date}'
+    No_Incoming_Mail: 수신된 메일이 없습니다.
+    Inbox_Header: 당신에게 보낸 이메일
+    Archive_Recipients_Tooltip: '&7수신자:'
+    Archive_Tooltip_Unread: '{0}&7: &7읽지 않음'
+    Archive_Tooltip_Read: '{0}&7: &2읽음'
+    Archive_Line: ' &r{subject} &7수신자: {recipients} &7시간: {date}'
+    Archive_Recipient: 수신자
+    Archive_No_Mail: 보낸 메일이 없습니다.
+    Archive_Header: 당신이 보낸 이메일
+    Send_Fail_Ignore: '{0}님은 플레이어를 무시하고 있어 메일을 보낼 수 없습니다.'
+    Send_Fail_Toggle: '{0}님은 메일을 끄고 있어 메일을 보낼 수 없습니다.'
+    Send_Success: 메일이 성공적으로 전송되었습니다!
+    Draft_Discarded: 보류 중인 메일이 폐기되었습니다.
+    Forward_Recipients: '''{prefix_question}채팅에 전달할 플레이어 이름을 |로 구분하여 입력하거나, ''exit''을 입력하여 전달을 취소하세요.'''
+    Forward_Recipients_Invalid: '''{prefix_error}부적절한 구문! 플레이어 이름을 ''kangarko|anotherPlayer|thirdPlayer''과 같이 지정하세요. 다음을 받았습니다: {0}'''
+    Forward_Success: '''{prefix_success}메일이 성공적으로 전달되었습니다.'''
+    Ready: 메일을 보낼 준비가 되었습니다. '/mail send'를 사용하여 보내세요.
+    Draft_Saved: 메일을 드래프트로 저장했습니다. 제목으로 책을 서명하여 보내려면 '/mail new'를 사용하세요.
+    Join_Notification: 새 메일이 있습니다 ({0}). 읽으려면 '/mail inbox'을 사용하세요.
+    New_Notification: '''{prefix_warn}{0}님이 새 메일을 보냈습니다. ''/mail inbox''을 사용하여 읽으세요.'''
+
+  Message:
+    Usage: <list/toggle/info/reload> <type> [group]
+    Description: 플레이어 메시지를 관리합니다.
+    Usages:
+    - '/{label} {sublabel} list <type> &7- 모든 메시지를 출력합니다.'
+    - '/{label} {sublabel} list <type> <group> &7- 그룹에서 메시지를 출력합니다.'
+    - '/{label} {sublabel} toggle <type> <group> &7- 메시지를 켜거나 끕니다.'
+    - '/{label} {sublabel} run <type> <group> &7- 강제로 메시지를 브로드캐스트합니다.'
+    - '/{label} {sublabel} info <type> <group> &7- 메시지 정보를 출력합니다.'
+    - '/{label} {sublabel} reload &7- 모든 메시지를 다시 불러옵니다.'
+    Reloaded: messages/ 폴더에서 모든 메시지를 다시 불러왔습니다.
+    No_Type: '메시지 유형을 지정하세요. 가능한 유형: {0}'
+    No_Messages: '{0} 메시지가 아직 생성되지 않았습니다.'
+    Group: ' &8- &7그룹: &f{0}'
+    List_Header: '{0} {1} 개의 메시지 표시 중'
+    No_Group: 메시지 그룹을 지정하세요.
+    Info:
+    - '&8{chat_line}'
+    - '<center>&6&l{0} 메시지 ''{1}'''
+    Info_Footer:
+    - '&8{chat_line}'
+    Toggle_On: '{0} 메시지 {1}이(가) &a활성화&7되었습니다.'
+    Toggle_Off: '{0} 메시지 {1}이(가) &c비활성화&7되었습니다.'
+
+  Me:
+    Usage: <메시지>
+    Description: 서식이 있는 메시지를 보냅니다.
+    Usages:
+    - '/{label} 안녕하세요! &7- 서식이 있는 메시지를 보냅니다.'
+
+  Migrate:
+    Usage: <chc8>
+    Description: ChatControl Pro에서 데이터를 이전합니다.
+    Usages:
+    - '/{label} {sublabel} chc8 &7- ChatControl Pro에서 데이터를 이전합니다.'
+  
+  Motd:
+    Usage: '[player]'
+    Description: 환영 메시지를 읽습니다.
+    Usages_Self:
+    - '/{label} &7- 자신의 환영 메시지를 읽습니다.'
+    Usages_Others:
+    - '/{label} <player> &7- 다른 플레이어에게 motd를 전송합니다.'
+    Success: 환영 메시지가 전송되었습니다.
+  
+  Mute:
+    Usage: <server/channel/player> <params...>
+    Description: 서버, 채널 또는 플레이어를 음소거하거나 음소거 해제합니다.
+    Usages:
+    - '/{label} <type> &7- 지정한 유형이 음소거되었는지 확인합니다.'
+    - '/{label} <type> off &7- 음소거된 유형을 음소거 해제합니다.'
+    - '/{label} <type> <duration 예: 1h2m15s> &7- 유형을 음소거합니다.'
+    - '/{label} <type> <duration> [reason] &7- 사유와 함께 유형을 음소거합니다.'
+    - '&cTip: 유형은 ''server'', ''channel'' 또는 ''player''일 수 있습니다. 채널과 플레이어의 경우 채널 또는 플레이어 이름도 지정하세요.'
+    Type_Server: 서버
+    Type_Player: 플레이어
+    Type_Channel: 채널
+    Server_On: ' &7이 서버는 현재 &cmuted&7 되어 있습니다.'
+    Server_Off: ' &7이 서버는 현재 &2음소거되지 않았습니다&7.'
+    Player_Or_Channel_On: ' &7- &f{0} &7는 현재 &cmuted&7 되어 있습니다.'
+    Player_Or_Channel_Off: ' &7- &f{0} &7는 현재 &2음소거되지 않았습니다&7.'
+    Change_Status_Tooltip_Unmute: '&6클릭하여 음소거 해제'
+    Change_Status_Tooltip_Mute: '&6클릭하여 3분 동안 음소거'
+    Channel_Status: 채널 음소거 상태
+    Server_Status: 서버 음소거 상태
+    Player_Status: 플레이어 음소거 상태
+    No_Duration: 기간 및 선택적으로 이유를 지정하세요.
+    Invalid_Duration: '잘못된 기간 형식: ''{0}''! 유효한 구문: 6y5mo4w3d2h1m0s, 30m 또는 1m30s와 같이 지정하세요.'
+    Mute_Success_Plain: '{type}이(가) {duration} 동안 {player}에 의해 음소거되었습니다.'
+    Mute_Success_Reason: '{type}이(가) {duration} 동안 {player}에 의해 음소거되었습니다. 이유: {reason}.'
+    Unmute_Success: '{type}이(가) {player}에 의해 음소거 해제되었습니다.'
+    Already_Muted: '{type} ''{0}''은(는) 이미 음소거되었습니다! 음소거를 해제하려면 ''off''를 사용하세요.'
+    Not_Muted: '{type} ''{0}''은(는) 음소거되지 않았습니다!'
+    Already_Muted_Server: '{type}은(는) 이미 음소거되었습니다! 음소거를 해제하려면 ''off''를 사용하세요.'
+    Not_Muted_Server: '{type}은(는) 음소거되지 않았습니다!'
+    Cannot_Mute_Yourself: 자신을 음소거할 수 없습니다.
+    Cannot_Create_Books: 음소거된 상태에서는 채팅이나 음소거된 상태에서 채팅이 불가능합니다.
+    Cannot_Command: 음소거된 상태에서 이 명령을 수행할 수 없습니다.
+    Cannot_Chat: 음소거된 상태에서 채팅을 입력할 수 없습니다.
+    Cannot_Place_Signs: 음소거된 상태에서는 채팅이나 음소거된 상태에서 서명을 할 수 없습니다.
+    Cannot_Rename_Items: 음소거된 상태에서는 채팅이나 음소거된 상태에서 서명을 할 수 없습니다.
+    Cannot_Chat_Player_Muted: 음소거된 상태에서 채널 채팅을 입력할 수 없습니다.
+    Cannot_Chat_Channel_Muted: 음소거된 상태에서 {0} 채널에서 대화할 수 없습니다.
+
+  Points:
+    Usage: <get/set/list> <player> [set] [amount]
+    Description: 플레이어 경고 포인트를 관리합니다.
+    Usages:
+    - '/{label} {sublabel} get <player> [set] &7- 플레이어 경고 포인트를 나열합니다.'
+    - '/{label} {sublabel} set <player> <set> <amount> &7- 경고 포인트를 설정합니다.'
+    - '/{label} {sublabel} list [set] &7- 모든 플레이어의 경고 포인트를 나열합니다.'
+    Disabled: 설정에서 경고 포인트가 비활성화되었습니다.
+    List_Item_1: ' &6{0} 설정:'
+    Remove_Tooltip: '&6클릭하여 제거.'
+    List_Item_2: ' &f{0}&8: &7{1} 포인트'
+    No_Points: 저장된 경고 포인트가 없습니다. 오셔서 얻어보세요!
+    List_Header: 저장된 경고 포인트
+    Player_List_Item: ' &f{0} &7= &f{1} 포인트'
+    No_Player_Points: '{0}에 대한 경고 포인트가 없습니다.'
+    Player_List_Header: '{0}님의 경고 포인트 나열'
+    No_Set: '설정 이름을 지정하세요. 사용 가능한 설정: {0}'
+    No_Amount: 유효한 포인트 양을 지정하세요.
+    No_Stored: '{0}은(는) ''{1}'' 설정에 경고 포인트가 없습니다.'
+    Given: '{1} 플레이어의 {0} 설정에 {2} 포인트를 설정했습니다.'
+    Removed: '{1} 플레이어의 {0} 설정에서 포인트를 제거했습니다.'
+
+  Purge:
+    Usage: <player> [anotherPlayer...]
+    Description: 플레이어가 보낸 모든 메시지를 제거합니다. 플레이어가 로그아웃되었더라도 적용됩니다.
+    Success: '{0}님이 보낸 모든 메시지가 제거되었습니다.'
+
+  Reply:
+    Dosage: <message>
+    Prescription: 마지막으로 메시지를 보낸 플레이어에게 답장합니다.
+    Alone: 답장할 상대가 없습니다 :(
+  
+  Spy:
+    Usage: <status/menu/off/toggle/list> [player] [type] [channel]
+    Description: 플레이어의 명령어와 메시지 감시를 전환합니다.
+    Usages_1:
+    - '/{label} status [player] &7- 플레이어의 감시 상태를 출력합니다.'
+    - '/{label} menu [player] &7- 감시 선택 메뉴를 엽니다.'
+    - '/{label} on/off [player] &7- 플레이어의 전체 감시를 전환합니다.'
+    - '/{label} toggle <type> [player] &7- 특정 부분의 감시를 전환합니다.'
+    Usages_2:
+    - '/{label} toggle chat <channel> [player] &7- 채널의 감시를 전환합니다.'
+    Usages_3:
+    - '/{label} list &7- 모든 감시 중인 플레이어를 나열합니다.'
+    No_Stored: 감시 중인 플레이어가 없습니다.
+    List_Tooltip:
+    - '&6{0}님에 대한 모든 감시를 중지합니다.'
+    List_Header: 모든 감시 중인 플레이어
+    Toggle_No_Type: '유효한 감시 유형을 지정하십시오. 사용 가능: {0}'
+    Toggle_No_Channel: '감시를 전환할 채팅 채널을 지정하십시오. 사용 가능: {0}'
+    Enable: '{0}님이 {1}을(를) 감시 중입니다.'
+    Disable: '{0}님이 {1} 감시를 중지했습니다.'
+    Cannot_Toggle_Anything_No_Perms: '{perm} 권한이 부족하여 어떤 것이든 감시를 전환할 수 없습니다.'
+    Type_Channel: 채널
+    Type_Chat: 채팅
+    Type_Command: 명령어
+    Type_Private_Message: 개인 메시지
+    Type_Sound_Notify: 소리 알림
+    Type_Mail: 메일
+    Type_Sign: 표지
+    Type_Book: 책
+    Type_Anvil: 모루
+    Type_Announcement: 공지
+    Type_Me: /me 메시지
+    Book_Untitled: 무제
+    No_Spying: '{0}님은 아무 것도 감시하지 않습니다.'
+    Status_1:
+    - '&8{chat_line_smooth}'
+    - '<center>&6{0}님이 현재 감시 중인 내용을 출력합니다.'
+    - '&8{chat_line_smooth}'
+    Status_2:
+    - ''
+    - '&7감시를 중지하려면 ''/{label} off {0}''을 입력하세요.'
+    Toggle_Off: '{0}님의 모든 감시가 중지되었습니다.'
+    Toggle_On: '{0}님의 모든 감시가 활성화되었습니다.'
+    Status_Sectors: '&6감시 중인 섹터:'
+    Status_Channels: '&6감시 중인 채널:'
+    Auto_Enable_1: '{prefix_warn}자동으로 감시 모드가 활성화되었습니다. 비활성화하려면 ''/spy off''을 입력하세요. '
+    Auto_Enable_2: '&8[&6?&8]'
+    Auto_Enable_Tooltip:
+    - '&6TIP: &7자동으로 감시 중지하려면'
+    - '&7관리자에게 &o{0}&7'
+    - '&7권한을 명시적으로 제거해 달라고 요청하세요.'
+  
+  Region:
+    Usage: <add/remove/view/tp/list> [name]
+    Description: 규칙에서 사용되는 지도 영역을 관리합니다.
+    Usages:
+    - '/{label} {sublabel} add <name> &7- 새로운 영역을 생성합니다.'
+    - '/{label} {sublabel} remove <name> &7- 영역을 삭제합니다.'
+    - '/{label} {sublabel} view <name> &7- 영역을 시각화합니다.'
+    - '/{label} {sublabel} tp <name> &7- 영역으로 이동합니다.'
+    - '/{label} {sublabel} tool &7- 영역 도구를 획득합니다.'
+    - '/{label} {sublabel} list &7- 사용 가능한 영역을 찾아봅니다.'
+    List:
+    - '&8{chat_line_smooth}'
+    - ' '
+    - '<center>&6&lChatControl 영역'
+    - '<center>&7{0} 로드됨'
+    - '&8{chat_line_smooth}'
+    Region_Info: '&f영역 정보'
+    Primary: '&7기본: &2{0}'
+    Secondary: '&7보조: &2{0}'
+    Size: '&7크기: &2{0} 블록'
+    Tooltip_Remove: '&7클릭하여 영구적으로 제거합니다.'
+    Tooltip_Visualize: '&7클릭하여 시각화합니다.'
+    Tooltip_Teleport: '&7클릭하여 영역 중심으로 이동합니다.'
+    Tool_Disabled: 영역 도구가 비활성화되었습니다. 사용하려면 settings.yml에서 'Register_Tools'을 true로 설정하세요.
+    Tool: Thor가 ChatControl 영역 도구를 1개 주었습니다. 좌/우 클릭하여 두 지점을 선택한 후 '/{label} {sublabel} add'를 사용하여 영역을 생성하세요.
+    Tool_Name: 영역 도구
+    Tool_Lore:
+    - ''
+    - 'ChatControl Red 영역을 생성하고'
+    - '편집하는 데 사용하세요.'
+    - ''
+    - '&b<< &7좌 클릭 - 기본'
+    - '&7우 클릭 - 보조 &b>>'
+    Point_Name: '[&a영역 지점&f]'
+    Point_Set_Primary: 기본 영역 지점을 설정하세요.
+    Point_Set_Secondary: 보조 영역 지점을 설정하세요.
+    No_Name: 영역 이름을 지정하세요.
+    No_Selection: 영역을 추가하기 전에 '/{label} {sublabel} tool'로 기본 및 보조 지점을 선택하세요.
+    Already_Exists: 같은 이름의 영역이 이미 존재합니다.
+    Saved: 새로운 영역 '{0}'을(를) 저장했습니다.
+    Removed: 영역 '{0}'을(를) 제거했습니다.
+    Visualized: '''{0}'' 영역이 5초 동안 시각화됩니다.'
+    Teleported: '''{0}'' 영역 중심으로 이동했습니다.'
+
+  Real_Name:
+    Usage: '[name/nick]'
+    Description: 플레이어의 실제 이름과 닉네임을 조회합니다.
+    Nick: 플레이어 {0}의 닉네임은 {1}입니다.
+    No_Nick: 플레이어 {0}은(는) 닉네임이 없습니다.
+  
+  Rule:
+    Usage: <info/toggle/create/import/list/reload> [rule]
+    Description: 규칙 시스템을 관리합니다.
+    Usages:
+    - '/{label} {sublabel} info <rule> &7- 규칙 정보를 출력합니다.'
+    - '/{label} {sublabel} toggle <rule> &7- 규칙을 켜거나 끕니다.'
+    - '/{label} {sublabel} create &7- 이름으로 규칙을 생성합니다.'
+    - '/{label} {sublabel} import &7- 대량의 규칙을 가져옵니다.'
+    - '/{label} {sublabel} list <type> &7- 로드된 규칙을 나열합니다.'
+    - '/{label} {sublabel} reload &7- 모든 규칙을 다시 로드합니다.'
+    Info_1:
+    - '&8{chat_line}'
+    - '<center>&6&l규칙 ''{0}'''
+    Info_2:
+    - '&8{chat_line}'
+    Enable: 규칙 {0}이(가) &a활성화&7되었습니다.
+    Disable: 규칙 {0}이(가) &c비활성화&7되었습니다.
+    List_No_Type: 표시할 규칙 유형을 지정하세요.
+    List_No_Rules: '{0} 규칙이 아직 생성되지 않았습니다. ''/{label} {sublabel}'' create 명령으로 몇 개 만들어보세요!'
+    Type_Global: global
+    Type_Chat: chat
+    Type_Command: command
+    Type_Packet: packet
+    Type_Sign: sign
+    Type_Book: book
+    Type_Anvil: anvil
+    Type_Tag: tag
+    Tooltip_Name: '&7이름: &f{0} '
+    Tooltip_Match: '&7일치: &f'
+    List_Header: '{0} {1} 규칙 표시 중'
+    Reloaded: 모든 규칙이 각각의 파일에서 다시로드되었습니다.
+    Rule_Creator: '&8[&6규칙 생성자&8] &7'
+    Rule_Creator_Welcome:
+    - '규칙 생성자 위자드에 오신 것을 환영합니다. 몇 가지 질문을 하고 새로운 규칙이 설정됩니다.'
+    - '질문에 직접 답하거나 언제든지 ''exit''을 입력하여 중단할 수 있습니다. 계속하려면 새 규칙의 이름을 입력하세요.'
+    Rule_Creator_Already_Exists: '{prefix_error}규칙 {0}은(는) 이미 존재합니다!'
+    Rule_Creator_Type:
+    - '좋아요, ''{0}'' 규칙을 준비 중입니다. 이제 규칙의 유형을 입력하세요. 이것은 또한 규칙을 배치할 파일을 결정합니다. '
+    - '사용 가능: {1}'
+    Rule_Creator_Match: 일치시킬 단어를 입력하세요.
+    Rule_Creator_Match_Already_Exists: A rule with this match already exists! Please enter a different word.
+    Invalid_Type: '{prefix_error}규칙 유형 ''{0}''은(는) 잘못되었습니다!'
+    Encode: 다음 질문에 입력한 일치하는 단어를 자동으로 인코딩하여 더 어렵게 우회할까요? yes/no를 입력하세요.
+    Invalid_Encode: '{error_prefix}잘못된 답변입니다! ''yes'' 또는 ''no'' 또는 ''exit''을 입력하여 포기하세요.'
+    Group_Name: '거의 끝났어요! 이제 이 규칙이 속할 그룹을 입력하거나 그룹이 없으면 ''none''을 입력하세요. 설치된 그룹: {0}'
+    Invalid_Group: '{prefix_error}그룹 {0}이(가) 존재하지 않습니다!'
+    Rule_Creator_Success: '{prefix_success}축하합니다. 새 규칙을 성공적으로 만들었습니다! 로드되어 작동 준비가 되었습니다. 다음은 그 모습입니다:'
+    Conversation_Disabled: '&c대화 모드가 비활성화되었습니다! settings.yml에서 Private_Messages.Auto_Mode를 true로 설정하여 활성화하세요.'
+    Conversation_Cancelled: '&c시간 내에 아무 것도 입력하지 않았으므로 대화가 취소되었습니다.'
+    Conversation_Abandoned: '&c대화가 포기되었습니다. 입력한 데이터가 손실되었습니다.'
+    Rule_Import: '&8[&6규칙 가져오기&8] &7'
+    Rule_Import_Start: 규칙을 가져오는 중입니다. 잠시 기다려주세요...
+    Rule_Import_Welcome:
+    - '규칙 가져오기 위자드에 오신 것을 환영합니다. 몇 가지 질문을 하고 파일의 각 행을 새 규칙으로 가져옵니다.'
+    - '질문에 직접 답하거나 언제든지 ''exit''을 입력하여 중단할 수 있습니다. 계속하려면 파일 이름을 입력하세요(플러그인 폴더에 있음).'
+    Rule_Import_Invalid_File: '{prefix_error}파일 {0}이(가) 존재하지 않습니다!'
+    Rule_Import_Type:
+    - '좋아요, {0}에서 규칙을 가져오고 있습니다. 이제 이 규칙의 유형을 입력하세요.'
+    - '사용 가능: {1}'
+    Rule_Import_Success: '{prefix_success}축하합니다. {0}개의 규칙을 성공적으로 가져왔습니다! 로드되어 작동 준비가 되었습니다.'
+    Rule_Import_Fail: '{prefix_error}규칙을 가져오는 중에 오류가 발생했습니다. 콘솔을 확인하세요!'
+  
+  Tag:
+    Disabled: 먼저 settings.yml의 Tag.Apply_On 키를 채우십시오.
+    Usage: <type> [tag/off]
+    Description: 태그를 설정합니다.
+    Usages:
+    - '/{label} list &7- 모든 태그 출력.'
+    - '/{label} off &7- 모든 태그 비활성화.'
+    - '/{label} <type> &7- 자신의 태그 출력.'
+    - '/{label} <type> <tag> &7- 자신에게 태그 설정.'
+    - '/{label} <type> off &7- 태그 비활성화.'
+    - ''
+    - '&c&lTIP: &c태그 표시에 {prefix_tag}, {suffix_tag}, {nick} 플레이스홀더 사용.'
+    Admin_Usage: <type> <player/list> [nick/off]
+    Admin_Description: 플레이어의 태그를 관리합니다.
+    Admin_Usages:
+    - '/{label} {sublabel} <type> <player> &7- 플레이어의 태그 출력.'
+    - '/{label} {sublabel} <type> <player> <nick> &7- 플레이어에게 태그 설정.'
+    - '/{label} {sublabel} <type> <player> off &7- 플레이어의 태그 제거.'
+    - '/{label} {sublabel} list [type] &7- 모든 태그가 설정된 플레이어 나열.'
+    No_Tags: 저장된 태그가 없습니다.
+    Admin_Tooltip_Remove: '&6{1}의 {0} 제거.'
+    Admin_List: 모든 태그 나열 중
+    Admin_Invalid_Params: 태그 유형과 플레이어 이름을 지정하십시오.
+    Admin_Status: '{possessive_form} {type}: {tag}.'
+    Your_Tags: '당신의 태그:'
+    Off_No_Tags: 현재 활성화된 태그가 없습니다.
+    Off_All: 모든 활성 태그가 비활성화되었습니다.
+    Status_Self: '당신의 {0}는: {1}'
+    No_Spaces: 이름은 공백을 포함할 수 없습니다.
+    No_Colors_Only: 태그는 색깔만으로 이루어질 수 없습니다.
+    Exceeded_Length: 태그 길이({0})가 {1} 글자의 최대 제한을 초과했습니다.
+    Not_Allowed: 태그를 설정할 수 없습니다. 다른 것을 시도하십시오!
+    No_Tag_Self: 현재 {1}이 없습니다.
+    No_Tag_Other: '{0}은 현재 {1}이 없습니다.'
+    No_Impersonation: 이름은 실제 플레이어 이름을 표현할 수 없습니다.
+    Already_Used: 이 이름은 이미 사용 중입니다.
+    Remove: '{target}의 {0} 제거.'
+    Remove_Self: 당신의 {0} 제거.
+    Set: '{target}에 대한 {0}을 "{1}&7"로 설정.'
+    Set_Self: 당신에게 {0}을 "{1}&7"로 설정.
+
+  Toggle:
+    Usage: <type> [group]
+    Description: 플러그인 부분을 보는 것을 전환합니다.
+    Usages_1:
+    - '/{label} <type> &7- 플러그인 부분 전환. 부분: {0}'
+    - '/{label} <type> [group] &7- 메시지 유형 전환. 유형: {1}'
+    Usages_Chat:
+    - '/{label} chat &7- 채팅 메시지 보기 전환. 스파이 중이라면 여전히 볼 수 있습니다.'
+    Usages_Join:
+    - '/{label} join default &7- 조인 메시지 그룹 ''default'' 전환.'
+    Usages_Timed:
+    - '/{label} timed special &7- 타이머 메시지 그룹 ''special'' 전환.'
+    Usages_Private_Message:
+    - '/{label} pm &7- 모든 개인 메시지 전환.'
+    Usages_Sound_Notify:
+    - '/{label} soundnotify &7- 소리 알림 전환.'
+    Usages_2:
+    - '/{label} list &7- 전환된 플러그인 부분 나열.'
+    Ignore_Group_On: '&7이제 {0} 메시지 {1}을(를) 무시하고 있습니다.'
+    Ignore_Group_Off: '&7이제 {0} 메시지 {1}을(를) 다시 보고 있습니다.'
+    Ignore_All_On: '&7모든 {0} 메시지를 무시하고 있습니다.'
+    Ignore_All_Off: '&7모든 {0} 메시지를 다시 보고 있습니다.'
+    Type_Join: 입장
+    Type_Quit: 퇴장
+    Type_Kick: 킥
+    Type_Death: 사망
+    Type_Timed: timed
+    List_Line: '&6숨겨진 {0} 메시지&7:'
+    List_Tooltip:
+    - '&6다시 보기 위해 클릭.'
+    List_Plugin_Parts_Title: '&6플러그인 부분&7:'
+    List_Plugin_Parts_Ignoring: '&c무시 중'
+    List_Plugin_Parts_Receiving: '&2다시 수신 중'
+    List_Plugin_Parts_Toggle:
+    - '&6전환하려면 클릭.'
+    List_Plugin_Parts_Header: '{0}을(를) 위한 토글된 플러그인 부분'
+    No_Group: '{0}에 대해 전환할 그룹을 지정하십시오. 가능한 것: {1}'
+    Invalid_Type: '유효하지 않은 유형. 사용 가능한 전환: {0}, 유형: {1}.'
+    Cannot_PM: '{0} 님이 개인 메시지를 끄셨습니다.'
+
+  Tell:
+    Usage: <player> [message]
+    Description: 플레이어에게 귓속말을 보냅니다.
+    Usages:
+    - '/{label} <player> <message> &7- 플레이어에게 귓속말 보내기.'
+    - '/{label} <player> &7- 대화 모드 전환, 이 모드에서는 채팅 메시지가 자동으로 귓속말로 전송됩니다.'
+    - '/{label} off &7- 활성화된 대화 모드 비활성화.'
+    Conversation_Mode_Not_Conversing: 현재 누구와도 대화 중이 아닙니다.
+    Conversation_Mode_Off: '{0}님과의 대화 모드가 &c비활성화&7되었습니다.'
+    Conversation_Mode_On: '{0}님과의 대화 모드가 &a활성화&7되었습니다.'
+    Conversation_Offline: 대화 중인 플레이어 {0}님이 오프라인 상태입니다. 대화 모드가 비활성화되었습니다.
+    Afk_Warning: '{prefix_warn}{0}님은 현재 자리비움 상태이므로 메시지를 확인하지 못할 수 있습니다.'
+    
+
+  # We do not allow changing messages for the /chc tour command because it would be impossible
+  # to make changes to these messages when we update our systems without constantly resetting your localization
+  Tour:
+    Not_Completed: ChatControl을 사용하려면 먼저 &7/{0} tour &c명령을 사용하여 시작 가이드를 완료해야 합니다.
+    Requires_Op: 시작 가이드는 오직 관리자만이 완료할 수 있습니다.
+    
+  Update:
+    Usage: <player>
+    Description: 자신이나 다른 플레이어의 탭 목록 이름을 다시 로드합니다.
+    Disabled: 설정 파일 (settings.yml)의 Tab_List에서 탭 목록 기능이 비활성화되어 있습니다.
+    Success: '{0}님의 탭 목록 정보를 다시 로드했습니다.'
+
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to paginator splitting command help into multiple pages
+# -------------------------------------------------------------------------------------------------
+Pages:
+  No_Page_Number: '&c이 명령에 대한 페이지 번호를 지정하십시오.'
+  No_Pages: '&c표시할 페이지가 없습니다.'
+  No_Page: 페이지에 지정된 페이지 번호가 없습니다.
+  Invalid_Page: '&c입력 ''{input}''은(는) 유효한 숫자가 아닙니다.'
+  Go_To_Page: '&7페이지 {page}로 이동'
+  Go_To_First_Page: '&7첫 번째 페이지로 이동'
+  Tooltip:
+  - '&7또한 ''/#flp <페이지> 명령을 사용하여 이동할 수 있습니다.'
+  
+# -------------------------------------------------------------------------------------------------
+# Messages related to players
+# -------------------------------------------------------------------------------------------------
+Player:
+  Not_Online: '&c플레이어 {player} &c은(는) 현재 이 서버에 로그인되어 있지 않습니다.'
+  Not_Connected: '&c플레이어 ''{0}&c''은(는) BungeeCord를 통해 연결되어 있지 않습니다.'
+  Not_Stored: '&c플레이어 ''{0}&c''은(는) 데이터베이스에 저장되어 있지 않습니다.'
+  Possessive_Form: '{player}님의'
+  Has: 가지고 있습니다
+  Newcomer_Cannot_Command: 당신은 인증유저가 아니며 아직 이 명령을 실행할 수 없습니다!
+  Newcomer_Cannot_Write: 당신은 인증유저가 아니며 아직 채팅을 작성할 수 없습니다.
+  No_Write_Chat_Permission: 채팅 메시지를 작성하려면 {0} 권한이 필요합니다.
+  No_Channel: 작성할 채널이 없습니다. '/{label_channel} join'을 사용하여 참여하세요.
+  No_Possible_Channel: 어떤 채널에 참여할 권한이 없습니다.
+  Kick_Disallowed_Nickname: '&c플레이어 이름에 허용되지 않는 문자가 포함되어 있습니다!'
+  Kick_Relogin: '&c다시 로그인하기 전에 {0}초 동안 기다려주십시오!'
+  Nobody_In_Channel: '{prefix_warn}채널에 채팅할 플레이어가 없습니다.'
+  Nobody_In_Range: '{prefix_warn}주변에 채팅할 플레이어가 없습니다.'
+  Already_Conversing: '{0}님은 이미 현재 서버 대화를 진행 중입니다!'
+  
+# -------------------------------------------------------------------------------------------------
+# Messages related to menus
+# -------------------------------------------------------------------------------------------------
+Menu:
+  Cannot_Open_During_Conversation: '&c대화를 종료하려면 ''exit''을(를) 입력하세요.'
+  Item_Deleted: '&2{item}이(가) 삭제되었습니다.'
+  Error: '&c이 메뉴를 열 때 문제가 발생했습니다! 자세한 내용은 관리자에게 문의하거나 콘솔을 확인하세요.'
+  Page_Previous: '&8<< &f페이지 {page}'
+  Page_Next: 페이지 {page} &8>>
+  Page_First: '&7첫 번째 페이지'
+  Page_Last: '&7마지막 페이지'
+  Title_Tools: 도구 메뉴
+  Tooltip_Info: '&f메뉴 정보'
+  Button_Return_Title: '&4&l돌아가기'
+  Button_Return_Lore:
+  - ''
+  - '이전으로 돌아갑니다.'
+  
+  Color:
+    Header: 채팅 색상 선택
+    Button_Empty_Title: 사용 가능한 색상 없음
+    Button_Empty_Lore:
+    - ''
+    - '현재 적용 가능한 색상이 없습니다.'
+    Button_Reset_Color_Title: 채팅 색상 초기화
+    Color_Reset: '&1채팅 색상이 초기화되었습니다!'
+    Button_Reset_Decoration: 채팅 장식 초기화
+    Decoration_Reset: '&1채팅 장식이 초기화되었습니다!'
+    Button_Decoration_Title: ' 장식'
+    Button_Decoration_Lore:
+    - ''
+    - '채팅에서 이 장식을'
+    - '자동으로 적용하려면 클릭하세요.'
+    - ''
+    - '예: {0}임의의 텍스트.'
+    Decoration_Set: 장식을 {0}(으)로 설정하였습니다.
+    Button_Color_Title: ' 색상'
+    Button_Color_Lore:
+    - ''
+    - '채팅 중에 이 색상을'
+    - '자동으로 적용하려면 클릭하세요.'
+    - ''
+    - '예: {0}Lorem ipsum dolor'
+    - '{0}sit amen, color ist kamen.'
+    Color_Set: 색상을 {0}(으)로 설정하였습니다.
+    Help:
+    - '색상 메뉴를 사용하면 채팅할 때'
+    - '자동으로 사용할 색상이나 장식을 선택할 수 있습니다.'
+    - ''
+    - '클릭하여 사용하려는 색상 또는'
+    - '장식을 선택하세요.'
+    - ''
+    - '현재 색상: {color}'
+    - '현재 장식: {decoration}'
+  
+  Spy:
+    Title_Enable: '&2감시 활성화'
+    Title_Disable: '&4감시 비활성화'
+    Toggle_Lore:
+    - ''
+    - '이 메뉴에서 모든 감시를 전환하려면 클릭하세요.'
+    Button_Lore_1:
+    - ''
+    - '어떤 채팅 채널을 감시할지 선택하려면'
+    - '클릭하세요.'
+    Button_Lore_Channels:
+    - ''
+    - '감시 중인 채널:'
+    Button_Title: 채널
+    Type_Chat: 모든 채팅 메시지
+    Type_Commands: 설정된 명령어 (settings.yml 기준)
+    Type_Private_Messages: 모든 개인 메시지
+    Type_Mail: 메일 전송 시
+    Type_Sign: 표지판을 설치할 때
+    Type_Book: 서명되었을 때의 책
+    Type_Anvil: 아이템의 이름을 변경할 때
+    Button_Toggle_Lore:
+    - ''
+    - '{label}에 대한 감시를'
+    - '전환하려면 클릭하세요.'
+    - ''
+    - '상태: {status}'
+    Status_On: '&b감시 중'
+    Status_Off: '&c비활성화됨'
+    Status_Toggle_On: '&2{type} 감시 활성화!'
+    Status_Toggle_Off: '&4{type} 감시 비활성화!'
+    Channels_Toggle_Lore:
+    - ''
+    - '이 채널에 대한 감시를 전환하려면 클릭하세요.'
+    - ''
+    - '상태: {status}'
+    Channels_Toggle_On: '&2이제 채널을 감시하고 있습니다!'
+    Channels_Toggle_Off: '&4채널 감시 비활성화됨!'
+    Help:
+    - '서버의 어떤 측면을 감시할지 선택하세요.'
+    - '또한 ''/{label} log'' 명령을 사용하여'
+    - '나갔을 때의 기록 데이터를 볼 수 있습니다.'
+    
+  
+# -------------------------------------------------------------------------------------------------
+# Messages related to tools
+# -------------------------------------------------------------------------------------------------
+Tool:
+  Error: '&c오류 발생! 도구를 사용하는 중 문제가 발생했습니다. 자세한 내용은 관리자에게 문의하세요.'
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to checking messages/chat/signs etc. against spam, rules and so on
+# -------------------------------------------------------------------------------------------------
+Checker:
+  Chat_Exploit_Disallowed: 코드 실행이 포함된 메시지로 인해 차단되었습니다.
+  Sign_Duplication: 같은 내용의 표지판을 여러 개 설치하지 마세요.
+  Move_Chat: 채팅을 입력하기 전에 이동해 주세요.
+  Move_Command: 명령을 실행하기 전에 이동해 주세요.
+  Delay_After_Join_Chat: 메시지를 입력하기 전에 {seconds}초 기다려주세요.
+  Delay_After_Join_Command: 명령을 입력하기 전에 {seconds}초 기다려주세요.
+  Delay_Chat: 다음 메시지 전송까지 {seconds}초 대기해 주세요.
+  Delay_Command: 다음 명령 실행까지 {seconds}초 대기해 주세요.
+  Similarity_Chat: 메시지가 {similarity}% 유사합니다. 다른 내용으로 입력해 주세요.
+  Similarity_Command: 명령이 {similarity}% 유사합니다. 다른 명령을 입력해 주세요.
+  Period: '{period_amount}{period} 동안 {type_amount}개의 {type}만 전송할 수 있습니다.'
+  Caps: '{type}에서 과도한 대문자 사용을 피하세요.'
+  Sound_Notify: 사운드 알림을 {seconds}초 동안 사용할 수 없습니다.
+  Parrot: '''{0}''를 반복할 수 없습니다. 지난 {2} 동안과 {1}% 유사합니다.'
+  No_Text: 텍스트가 없는 메시지는 전송할 수 없습니다!
+  No_Text_After_Change: 메시지가 편집되어 빈 메시지로 전송할 수 없습니다.
+
+# -------------------------------------------------------------------------------------------------
+# Words for both singular and plural form. Separate these two forms with ", "
+# -------------------------------------------------------------------------------------------------
+Cases:
+  Second: 초, 초
+  Message: 메시지, 메시지
+  Command: 명령어, 명령어
+ 
+# -------------------------------------------------------------------------------------------------
+# Different prefixes you can use by calling {prefix_<type>} such as {prefix_info}
+# -------------------------------------------------------------------------------------------------
+Prefix:
+  Info: '&8&l[&9&li&8&l]&7 '
+  Success: '&8&l[&2&l!&8&l]&7 '
+  Warn: '&8&l[&6&l!&8&l]&6 '
+  Error: '&8&l[&4&lX&8&l]&c '
+  Question: '&8&l[&a&l?&8&l]&7 '
+  Announce: '&8&l[&5&l!&8&l]&d '
+
+# -------------------------------------------------------------------------------------------------
+# Miscellaneous
+# -------------------------------------------------------------------------------------------------
+You: 당신
+Your: 당신의
+His: 그의
+And: 그리고
+None: 없음
+Server: 서버
+Channel: 채널
+False_Value: 'false'
+Server_Prefix: '[서버]'
+Console_Name: 콘솔
+
+# -------------------------------------------------------------------------------------------------
+# Database related messages
+# -------------------------------------------------------------------------------------------------
+Data_Missing: '&c{name} 님은 데이터베이스 정보가 부족합니다! {type}은(는) 게임 내에서만 생성해주세요! 건너뛰는 중입니다...'
+Data_Loading: 데이터베이스가 현재 데이터를 로딩 중입니다. 잠시 기다려주세요...
+
+# -------------------------------------------------------------------------------------------------
+# Messages shown when player runs a command he lacks permission for
+# -------------------------------------------------------------------------------------------------
+No_Permission: '&c권한 없음: {permission}'
+
+# -------------------------------------------------------------------------------------------------
+# Shown when console tries to enter a server conversation
+# -------------------------------------------------------------------------------------------------
+Conversation_Requires_Player: 플레이어만 이 대화에 참여할 수 있습니다.
+
+# -------------------------------------------------------------------------------------------------
+# Internal versioning number
+# -------------------------------------------------------------------------------------------------
+Version: 2
